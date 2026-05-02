@@ -13,3 +13,12 @@ def predict_defect(image_path):
         return "Defective PCB"
     else:
         return "Good PCB"
+
+from app.gradcam import save_gradcam
+
+save_gradcam(
+    model,
+    img,
+    image_path,
+    "uploads/gradcam_result.jpg"
+)
