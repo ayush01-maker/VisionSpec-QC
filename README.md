@@ -2,6 +2,9 @@
 
 An AI-based computer vision system for automated PCB quality inspection.
 
+## Overview
+VisionSpec-QC is an AI-based industrial quality inspection system designed to detect PCB defects using deep learning and computer vision techniques.
+
 ## Features
 - Defect detection using Deep Learning
 - Image preprocessing using OpenCV
