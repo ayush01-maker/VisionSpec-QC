@@ -24,6 +24,8 @@ VisionSpec-QC is an AI-based industrial quality inspection system designed to de
 
 ## Tech Stack
 - Python
+- TensorFlow/Keras
 - OpenCV
-- TensorFlow / PyTorch
-- Streamlit / Flask
+- Streamlit
+- NumPy
+- Matplotlib
