@@ -1,6 +1,10 @@
 tensorflow
-flask
+keras
 numpy
-opencv-python
+pandas
 matplotlib
-pillow
+opencv-python
+scikit-learn
+streamlit
+Pillow
+seaborn
