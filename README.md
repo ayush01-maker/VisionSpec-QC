@@ -7,14 +7,33 @@ An AI-based computer vision system for automated PCB quality inspection
 ![OpenCV](https://img.shields.io/badge/OpenCV-ComputerVision-green)
 ![License](https://img.shields.io/badge/License-MIT-brightgreen)
 
-## Overview
-VisionSpec-QC is an AI-based industrial quality inspection system designed to detect PCB defects using deep learning and computer vision techniques.
+# Overview
 
-## Features
-- Defect detection using Deep Learning
-- Image preprocessing using OpenCV
-- Model training using TensorFlow/PyTorch
-- Grad-CAM visualization
+VisionSpec-QC is a computer vision-based industrial quality inspection system designed to automatically identify defective and non-defective products using deep learning techniques.
+
+The project integrates CNN-based image classification with Grad-CAM visualization to improve transparency and explainability in automated inspection workflows.
+
+This system helps industries reduce manual inspection efforts, improve accuracy, and enhance production quality using AI-powered visual analysis.
+
+---
+
+# Features
+
+- Automated defect detection
+- CNN-based image classification
+- Grad-CAM explainability visualization
+- Industrial quality inspection workflow
+- Deep learning powered prediction system
+- Real-time image testing support
+- Streamlit-based interactive interface
+
+---
+
+# System Architecture
+
+![Architecture](assets/Architecture.JPEG)
+
+---
 
 ## Project Structure
 - dataset/ → images and data
