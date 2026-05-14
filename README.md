@@ -31,9 +31,27 @@ This system helps industries reduce manual inspection efforts, improve accuracy,
 
 # System Architecture
 
-![Architecture](assets/Architecture.JPEG)
+![Architecture](assets/Architecture.jpeg)
 
 ---
+# Workflow
+
+```text
+Input Image
+      ↓
+Image Preprocessing
+      ↓
+CNN / Deep Learning Model
+      ↓
+Feature Extraction
+      ↓
+Defect Classification
+      ↓
+Grad-CAM Heatmap Generation
+      ↓
+Final Quality Inspection Result
+```
+
 
 ## Project Structure
 - dataset/ → images and data
@@ -46,10 +64,23 @@ This system helps industries reduce manual inspection efforts, improve accuracy,
 - Ayush (Setup & Development)
 - Indu (Dataset)
 
-## Tech Stack
+# Tech Stack
+
 - Python
-- TensorFlow/Keras
+- TensorFlow
+- Keras
 - OpenCV
-- Streamlit
 - NumPy
+- Pandas
 - Matplotlib
+- Streamlit
+- Grad-CAM
+
+# Applications
+
+- Manufacturing industries
+- Industrial quality assurance
+- Automated inspection systems
+- Smart factory environments
+- Defect detection pipelines
+
