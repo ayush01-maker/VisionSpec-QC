@@ -1,29 +1,26 @@
+import streamlit as st
+from predict import predict_image
+from gradcam import generate_gradcam
 
-from flask import Flask, request, jsonify
-from predict import predict_defect
-import os
+st.set_page_config(page_title="VisionSpec-QC", layout="centered")
 
-app = Flask(__name__)
+st.title("VisionSpec-QC")
+st.subheader("AI-Powered Industrial Quality Inspection")
 
-UPLOAD_FOLDER = "uploads"
-os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+uploaded_file = st.file_uploader(
+    "Upload an image",
+    type=["jpg", "jpeg", "png"]
+)
 
-@app.route("/")
-def home():
-    return "VisionSpec-QC API Running"
+if uploaded_file is not None:
 
-@app.route("/predict", methods=["POST"])
-def predict():
-    file = request.files["image"]
+    prediction, confidence, img = predict_image(uploaded_file)
 
-    file_path = os.path.join(UPLOAD_FOLDER, file.filename)
-    file.save(file_path)
+    st.image(img, caption="Uploaded Image", use_column_width=True)
 
-    result = predict_defect(file_path)
+    st.write(f"### Prediction: {prediction}")
+    st.write(f"### Confidence: {confidence:.2f}%")
 
-    return jsonify({
-        "prediction": result
-    })
+    heatmap = generate_gradcam(uploaded_file)
 
-if __name__ == "__main__":
-    app.run(debug=True)
+    st.image(heatmap, caption="Grad-CAM Visualization", use_column_width=True)
