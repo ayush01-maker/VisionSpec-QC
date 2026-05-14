@@ -31,7 +31,7 @@ This system helps industries reduce manual inspection efforts, improve accuracy,
 
 # System Architecture
 
-![Architecture](assets/Architecture.jpeg)
+![Architecture](assests/Architecture.jpeg)
 
 ---
 # Workflow
